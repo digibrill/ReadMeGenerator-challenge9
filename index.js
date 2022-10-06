@@ -58,49 +58,48 @@ const startQuiz =  async () => {
     message: "Enter your email address.",
   }  
   ]).then((answers) => {
-      fs.writeFile(`README.md`, `# ${answers.projectName}
+    fs.writeFile(`README.md`, `# ${answers.projectName}
+## ${answers.projectDescription}
 
-      ## ${answers.projectDescription}
+## Table of Contents
+     
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
       
-      ## Table of Contents
+## Installation
       
-      - [Installation](#installation)
-      - [Usage](#usage)
-      - [Credits](#credits)
-      - [License](#license)
-      
-      ## Installation
-      
-      ${answers.projectInstallation}
+${answers.projectInstallation}
 
-      ## Usage
+## Usage
+    
+${answers.usageInstructions}
       
-      ${answers.usageInstructions}
+## Credits
       
-      ## Credits
+${answers.contribPersons}
       
-      ${answers.contribPersons}
-      
-      ## License
+## License
 
-      ${answers.licenseType}
+${answers.licenseType}
       
-      ## Questions
+## Questions
 
-      Please reach out to the following links for questions.
+Please reach out to the following links for questions.
 
-      My Github Username: ${answers.githubUsername}
+My Github Username: ${answers.githubUsername}
       
-      My Github: ${answers.githubLink}
+My Github: ${answers.githubLink}
       
-      My Email: ${answers.emailAddress}
+My Email: ${answers.emailAddress}
       
-      ## Tests
+## Tests
       
-      ${answers.testInstructions}`, (err) =>
-            err ? console.error(err) : console.log('README saved!'));
-      })
-  }
+${answers.testInstructions}`, (err) =>
+ err ? console.error(err) : console.log('README saved!'));
+ })
+}
 startQuiz();
 /**
 EXTRA CREDIT validation to ensure that user input provided is in the proper expected format.
