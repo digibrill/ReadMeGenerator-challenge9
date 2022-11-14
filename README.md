@@ -1,7 +1,5 @@
 # README Generator
 
-## I hope this works! And that I did it correctly
-      
 ![portfolio demo](./Assets/images/screenshot.png)
      
 ## Questions
